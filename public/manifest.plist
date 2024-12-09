@@ -19,7 +19,7 @@
                 <key>bundle-identifier</key>    
                 <string>com.org.AmarUjala.news</string>
                 <key>bundle-version</key>
-                <string>4.5.0</string>
+                <string>4.5</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
