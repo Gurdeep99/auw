@@ -19,7 +19,6 @@ const Page = () => {
             <a
               href="itms-services://?action=download-manifest&url=https://auw.gurdeep.net/manifest.plist"
               className="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-500 transition"
-              onClick={() => setShowPopup(false)}
             >
               Got it!
             </a>
