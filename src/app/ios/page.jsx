@@ -19,7 +19,6 @@ const page = () => {
 
   return (
     <div style={styles.container}>
-      <h1>Download the App</h1>
       <button style={styles.button} onClick={handleButtonOneClick}>
         Download iOS App
       </button>
