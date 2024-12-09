@@ -1,25 +1,51 @@
-import React from 'react'
+import React from 'react';
 
 const page = () => {
-    return (
-        <div>
-            <h1>Install My App</h1>
-            <p>Click the button below to install the app on your iOS device:</p>
-            <a
-                href="itms-services://?action=download-manifest&url=https://fcm.gurdeep.net/manifest.plist"
-                style={{
-                    display: 'inline-block',
-                    padding: '10px 20px',
-                    backgroundColor: '#007bff',
-                    color: '#fff',
-                    borderRadius: '5px',
-                    textDecoration: 'none',
-                }}
-            >
-                Install App
-            </a>
-        </div>
-    );
+  const handleButtonOneClick = () => {
+    window.location.href =
+      'itms-services://?action=download-manifest&url=https://auw.gurdeep.net/manifest.plist';
+  };
+
+  const handleButtonTwoClick = () => {
+    // Directly download the .apk file
+    const link = document.createElement('a');
+    link.href = 'https://auw.gurdeep.net/Amarujala.apk'; // Replace with your .apk file URL
+    link.download = 'Amarujala.apk'; // Suggests a filename for the download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  return (
+    <div style={styles.container}>
+      <button style={styles.button} onClick={handleButtonOneClick}>
+        Download iOS App
+      </button>
+      <button style={styles.button} onClick={handleButtonTwoClick}>
+        Download Android App
+      </button>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row', // Align buttons horizontally
+    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', // Center vertically
+    height: '100vh', // Full viewport height
+    gap: '20px', // Space between buttons
+  },
+  button: {
+    padding: '10px 20px',
+    fontSize: '16px',
+    cursor: 'pointer',
+    backgroundColor: '#0070f3',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+  },
 };
 
 export default page;
