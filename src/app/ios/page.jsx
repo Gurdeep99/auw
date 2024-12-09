@@ -4,10 +4,6 @@ import React, { useState, useEffect } from "react";
 const Page = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-//   useEffect(() => {
-//     const timer = setTimeout(() => setShowPopup(false), 5000); // Auto-hide after 5 seconds
-//     return () => clearTimeout(timer);
-//   }, []);
 
   return (
     <div className="bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center min-h-screen px-4">
@@ -20,8 +16,10 @@ const Page = () => {
             <p className="text-sm sm:text-base text-gray-700 mb-4">
               This site is for test purposes only.
             </p>
-            <a href="itms-services://?action=download-manifest&url=https://auw.gurdeep.net/manifest.plist"
+            <a
+              href="itms-services://?action=download-manifest&url=https://auw.gurdeep.net/manifest.plist"
               className="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-500 transition"
+              onClick={() => setShowPopup(false)}
             >
               Got it!
             </a>
@@ -39,6 +37,7 @@ const Page = () => {
         <div className="relative inline-block">
           <button
             className="relative z-10 bg-white text-blue-600 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition"
+            onClick={() => setShowPopup(true)}
           >
             Download
           </button>
@@ -49,3 +48,4 @@ const Page = () => {
 };
 
 export default Page;
+
