@@ -10,8 +10,8 @@ const page = () => {
   const handleButtonTwoClick = () => {
     // Directly download the .apk file
     const link = document.createElement('a');
-    link.href = 'https://auw.gurdeep.net/Amarujala.apk'; // Replace with your .apk file URL
-    link.download = 'Amarujala.apk'; // Suggests a filename for the download
+    link.href = 'https://auw.gurdeep.net/revamp_9Dec2024_90.apk'; // Replace with your .apk file URL
+    link.download = 'revamp_9Dec2024_90.apk'; // Suggests a filename for the download
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
