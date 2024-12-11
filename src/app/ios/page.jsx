@@ -19,9 +19,9 @@ const page = () => {
 
   return (
     <div style={styles.container}>
-      <button style={styles.button} onClick={handleButtonOneClick}>
+      {/* <button style={styles.button} onClick={handleButtonOneClick}>
         Download iOS App
-      </button>
+      </button> */}
       <button style={styles.button} onClick={handleButtonTwoClick}>
         Download Android App
       </button>
