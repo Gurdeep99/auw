@@ -39,9 +39,9 @@ export async function POST(req) {
     }
 
     const body = await req.json();
-    const { user, token } = body;
+    const { type, token } = body;
 
-    if (!user || (user !== "user" && user !== "guruji")) {
+    if (!type || (type !== "user" && type !== "guruji")) {
         return new Response(
             JSON.stringify({ error: "Invalid user parameter" }),
             {
